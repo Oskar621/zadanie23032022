@@ -22,6 +22,10 @@ class MainActivity : AppCompatActivity() {
             plecm.isEnabled = false
             pleck.isEnabled = false
             number.isEnabled = false
+            gry.isEnabled = false
+            sport.isEnabled = false
+            turystyka.isEnabled = false
+            muzyka.isEnabled = false
             if(plecm.isChecked)
             {
                 wynik += "Mezczyzna, "
@@ -60,6 +64,10 @@ class MainActivity : AppCompatActivity() {
             plecm.isEnabled = true
             pleck.isEnabled = true
             number.isEnabled = true
+            gry.isEnabled = false
+            sport.isEnabled = false
+            turystyka.isEnabled = false
+            muzyka.isEnabled = false
         }
     }
 }
