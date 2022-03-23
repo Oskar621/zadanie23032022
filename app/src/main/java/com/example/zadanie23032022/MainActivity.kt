@@ -2,9 +2,7 @@ package com.example.zadanie23032022
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.RadioButton
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,12 +13,11 @@ class MainActivity : AppCompatActivity() {
         val number = findViewById<EditText>(R.id.Wiek)
         val plecm = findViewById<RadioButton>(R.id.mezczyzna)
         val pleck = findViewById<RadioButton>(R.id.kobieta)
-        val gry = findViewById<RadioButton>(R.id.Gry)
-        val sport = findViewById<RadioButton>(R.id.sport)
-        val turystyka = findViewById<RadioButton>(R.id.turystyka)
-        val muzyka = findViewById<RadioButton>(R.id.muzyka)
+        val gry = findViewById<CheckBox>(R.id.gry)
+        val sport = findViewById<CheckBox>(R.id.sport)
+        val turystyka = findViewById<CheckBox>(R.id.turystyka)
+        val muzyka = findViewById<CheckBox>(R.id.muzyka)
         var wynik = ""
-        var wiek = 0
         zatwierdzkom.setOnClickListener {
             plecm.isEnabled = false
             pleck.isEnabled = false
@@ -34,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             {
                 wynik += "Kobieta, "
             }
-            wiek = number.text.toString().toInt()
+            val wiek = number.text.toString().toInt()
             wynik =wynik +  wiek.toString() + "lat, Zainteresowania:  "
             if(gry.isChecked)
             {
@@ -53,9 +50,11 @@ class MainActivity : AppCompatActivity() {
 
             if(muzyka.isChecked)
             {
-                wynik += "muzyka"
+                wynik += "Muzyka"
             }
             wynik = wynik + "."
+            Toast.makeText(applicationContext, wynik,Toast.LENGTH_SHORT).show()
+            wynik = ""
         }
         cofnijkom.setOnClickListener {
             plecm.isEnabled = true
