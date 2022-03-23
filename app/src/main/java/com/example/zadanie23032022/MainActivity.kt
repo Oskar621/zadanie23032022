@@ -34,28 +34,28 @@ class MainActivity : AppCompatActivity() {
             {
                 wynik += "Kobieta, "
             }
-            wiek = number.text
-            wynik += wiek
-            if(plecm.isChecked)
+            wiek = number.text.toString().toInt()
+            wynik =wynik +  wiek.toString() + "lat, Zainteresowania:  "
+            if(gry.isChecked)
             {
-                wynik += "Mezczyzna, "
+                wynik += "Gry, "
             }
 
-            if(plecm.isChecked)
+            if(sport.isChecked)
             {
-                wynik += "Mezczyzna, "
+                wynik += "Sport, "
             }
 
-            if(plecm.isChecked)
+            if(turystyka.isChecked)
             {
-                wynik += "Mezczyzna, "
+                wynik += "Turystyka, "
             }
 
-            if(plecm.isChecked)
+            if(muzyka.isChecked)
             {
-                wynik += "Mezczyzna, "
+                wynik += "muzyka"
             }
-
+            wynik = wynik + "."
         }
         cofnijkom.setOnClickListener {
             plecm.isEnabled = true
