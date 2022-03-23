@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             number.isEnabled = false
             if(plecm.isChecked)
             {
-                wynik += "Mezczyzna, "
+                wynik += "Mezczyzna,  "
             }
 
             if(pleck.isChecked)
