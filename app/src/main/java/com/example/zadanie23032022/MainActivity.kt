@@ -64,10 +64,10 @@ class MainActivity : AppCompatActivity() {
             plecm.isEnabled = true
             pleck.isEnabled = true
             number.isEnabled = true
-            gry.isEnabled = false
-            sport.isEnabled = false
-            turystyka.isEnabled = false
-            muzyka.isEnabled = false
+            gry.isEnabled = true
+            sport.isEnabled = true
+            turystyka.isEnabled = true
+            muzyka.isEnabled = true
         }
     }
 }
